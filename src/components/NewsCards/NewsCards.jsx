@@ -2,11 +2,14 @@ import { Container, Grid } from '@mui/material';
 
 
 import NewsCard from "./NewCard/NewsCard";
+import InfoCard from '../InfoCards/InfoCard/InfoCard';
+import { goBackInfo } from '../InfoCards/infoCardDetails';
 
 const NewsCards = ({ articles }) => {
     return (
         <>
             <Container>
+                <InfoCard cardHeight='5rem' cardDetails={goBackInfo}/>
                 <Grid container spacing={2}>
                     {
                         articles.map((article, i) => (

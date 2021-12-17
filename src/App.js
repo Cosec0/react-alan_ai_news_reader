@@ -3,6 +3,8 @@ import alanBtn from '@alan-ai/alan-sdk-web';
 
 import './App.css';
 import NewsCards from './components/NewsCards/NewsCards';
+import InfoCards from './components/InfoCards/InfoCards';
+import Header from './components/Header/Header';
 
 const alanKey = 'a2284e68a0f6b574c0a838badbab8ff82e956eca572e1d8b807a3e2338fdd0dc/stage';
 
@@ -27,12 +29,12 @@ const App = () => {
 
     return (
         <div>
-            <h1>Testing</h1>
+            <Header/>
             <br/>
             {
                 newsArticles.length > 0 ?
                 (<NewsCards articles={newsArticles}/>) :
-                'No news'
+                (<InfoCards/>)
             }
         </div>
     )
