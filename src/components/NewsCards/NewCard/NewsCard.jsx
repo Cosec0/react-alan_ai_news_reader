@@ -4,11 +4,11 @@ import useStyles from './styles';
 import formatDate from '../../../utils/formatDate';
 import newsPlaceholder from'../../../assets/images/news-placeholder.png';
 
-const NewsCard = ({ article, i }) => {
+const NewsCard = ({ article, i, highlightedArticle }) => {
   const classes = useStyles();
 
   return (
-    <Card key={i} className={classes.card}>
+  <Card key={i} className={`${classes.card} ${highlightedArticle == i ? classes.highlightedCard : ''}`}>
       <CardHeader subheader={formatDate(article.publishedAt)}/>
       <CardMedia
           component="img"
@@ -18,6 +18,7 @@ const NewsCard = ({ article, i }) => {
       />
       <CardContent>
           <Typography variant="overline" color="text.secondary">
+                {highlightedArticle == i ? 'hoise': 'nai'}
                 {article.author}
           </Typography>
           <Typography variant="button" component="div">

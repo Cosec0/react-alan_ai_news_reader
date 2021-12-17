@@ -5,7 +5,7 @@ import NewsCard from "./NewCard/NewsCard";
 import InfoCard from '../InfoCards/InfoCard/InfoCard';
 import { goBackInfo } from '../InfoCards/infoCardDetails';
 
-const NewsCards = ({ articles }) => {
+const NewsCards = ({ articles, highlightedArticle }) => {
     return (
         <>
             <Container>
@@ -14,7 +14,12 @@ const NewsCards = ({ articles }) => {
                     {
                         articles.map((article, i) => (
                             <Grid item lg={3} md={4} sm={6} xs={12}>
-                                <NewsCard key={i} article={article} i={i+1}/>
+                                <NewsCard 
+                                    key={i} 
+                                    article={article} 
+                                    i={i+1} 
+                                    highlightedArticle={highlightedArticle}
+                                />
                             </Grid>
                         ))
                     }

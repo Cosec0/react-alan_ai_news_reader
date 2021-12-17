@@ -2,7 +2,7 @@ import { makeStyles } from '@mui/styles';
 
 export default makeStyles({
     card: { 
-        height: '35rem', 
+        height: '38rem', 
         position: 'relative' 
     },
     footer: { 
@@ -22,5 +22,8 @@ export default makeStyles({
         border: '1px black text.secondary', 
         borderRadius: '50%', 
         padding: '0.25rem' 
+    },
+    highlightedCard: {
+        borderBottom: '0.5rem solid blue'
     }
 });
