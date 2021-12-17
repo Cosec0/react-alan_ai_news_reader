@@ -10,7 +10,7 @@ const NewsCards = ({ articles, highlightedArticle }) => {
         <>
             <Container>
                 <InfoCard cardHeight='5rem' cardDetails={goBackInfo}/>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} sx={{ marginTop: '0.5rem' }}>
                     {
                         articles.map((article, i) => (
                             <Grid item lg={3} md={4} sm={6} xs={12}>
