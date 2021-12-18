@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React news reader application. News API is used to fetch the news and Alan AI as the chat bot for reading those news. [Demo App](https://kosu-news-reader.herokuapp.com/).
 
 ## Available Scripts
 
