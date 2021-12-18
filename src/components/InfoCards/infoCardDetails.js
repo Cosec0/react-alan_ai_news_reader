@@ -32,3 +32,10 @@ export const goBackInfo = {
     footer: '',
     bgColor: 'DimGray'
 }
+
+export const openArticleInfo = {
+    header: '',
+    body: 'To open specific article, try saying with the number like:<br/><b><i>Open article number 4</i></b>',
+    footer: '',
+    bgColor: 'DimGray'
+}
