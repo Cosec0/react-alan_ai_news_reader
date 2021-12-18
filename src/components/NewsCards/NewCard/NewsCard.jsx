@@ -8,7 +8,7 @@ const NewsCard = ({ article, i, highlightedArticle }) => {
   const classes = useStyles();
 
   return (
-  <Card key={i} id={i} className={`${classes.card} ${highlightedArticle == i ? classes.highlightedCard : ''}`}>
+  <Card key={i} id={i} className={`${classes.card} ${highlightedArticle === i ? classes.highlightedCard : ''}`}>
       <CardHeader subheader={formatDate(article.publishedAt)}/>
       <CardMedia
           component="img"
