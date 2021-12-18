@@ -8,7 +8,7 @@ const NewsCard = ({ article, i, highlightedArticle }) => {
   const classes = useStyles();
 
   return (
-  <Card key={i} className={`${classes.card} ${highlightedArticle == i ? classes.highlightedCard : ''}`}>
+  <Card key={i} id={i} className={`${classes.card} ${highlightedArticle == i ? classes.highlightedCard : ''}`}>
       <CardHeader subheader={formatDate(article.publishedAt)}/>
       <CardMedia
           component="img"
@@ -18,7 +18,6 @@ const NewsCard = ({ article, i, highlightedArticle }) => {
       />
       <CardContent>
           <Typography variant="overline" color="text.secondary">
-                {highlightedArticle == i ? 'hoise': 'nai'}
                 {article.author}
           </Typography>
           <Typography variant="button" component="div">
@@ -26,9 +25,7 @@ const NewsCard = ({ article, i, highlightedArticle }) => {
           </Typography>
           {
             article.description && (
-              <Typography variant="body2" color="text.secondary">
-                {`${String(article.description).slice(0, 250)}...`}
-              </Typography>
+              <Typography variant="body2" color="text.secondary" dangerouslySetInnerHTML={{ __html: `${String(article.description).slice(0, 250)}...` }}/>
             )
           }
       </CardContent>

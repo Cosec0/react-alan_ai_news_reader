@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Container, Grid } from '@mui/material';
 
 
@@ -6,6 +7,14 @@ import InfoCard from '../InfoCards/InfoCard/InfoCard';
 import { goBackInfo } from '../InfoCards/infoCardDetails';
 
 const NewsCards = ({ articles, highlightedArticle }) => {
+
+    useEffect(() => {
+        let scroll = document.getElementById(highlightedArticle || "1");
+        scroll.scrollIntoView();
+
+        return scroll;
+    }, [highlightedArticle]);
+
     return (
         <>
             <Container>
