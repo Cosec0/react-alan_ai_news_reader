@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# News Reader React App
 
 This is a React news reader application. News API is used to fetch the news and Alan AI as the chat bot for reading those news. [Demo App](https://kosu-news-reader.herokuapp.com/).
 
